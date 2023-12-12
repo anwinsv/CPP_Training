@@ -40,5 +40,5 @@ int main()
     return 0;
 }
 
-//g++ -std=c++11 multithreading.cpp -o multithreading -pthread
+//g++ -std=c++11 fn_multithread.cpp -o multithreading -pthread
 //use this to compile
