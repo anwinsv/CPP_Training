@@ -1,12 +1,15 @@
 #include<iostream>
 #include<vector>
 #include<algorithm>
+#include<bits/stdc++.h>
+
 using namespace std;
 
 int main()
 {
     vector<int> v1 = {99,56,69,34,72,27,15,49};
-    vector<int>::iterator i;
+    vector<int>::iterator i = v1.begin();
+
     int srch;
 
     for(i=v1.begin();i!=v1.end();i++)
@@ -40,10 +43,15 @@ int main()
     //BINARY SEARCH
     cout << "Enter value to search: ";
     cin >> srch;
-    if(binary_search(v1.begin(),v1.end(),srch))
+    sort(v1.begin(),v1.end()); //ascending order
+    if (binary_search(v1.begin(), v1.end(), srch))
+    {
         cout << "Value found" << endl;
+    }
     else
+    {
         cout << "Value not found" << endl;
+    }
     
     vector<int> v2 = {7,3,5,5,5,6,6,2,1,1,1,5};
     vector<int>::iterator i1,i2;
@@ -53,9 +61,9 @@ int main()
     cout << "Upper bound of 5 = " << *i1 << endl;
     cout << "Lower bound of 1 = " << *i2 << endl;
 
-    //COPY
+    // //COPY
     vector<int> v3 = {0};
-    copy(v1.begin(),v1.end(),v3);
+    copy(v1.begin(),v1.end(),back_inserter(v3));
     cout << "V3: ";
     for(i=v3.begin();i!=v3.end();i++)
     {
