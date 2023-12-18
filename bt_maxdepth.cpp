@@ -2,7 +2,7 @@
 #include<algorithm>
 using namespace std;
 
-class node
+class node //structure of a node
 {
     int data;
 public:
@@ -14,7 +14,7 @@ public:
     node *right;
 };
 
-int maxDepth(node *n)
+int maxDepth(node *n)  //function to find the max depth of BT
 {
     if (n == NULL)
     {
